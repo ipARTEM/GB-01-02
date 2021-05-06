@@ -24,9 +24,6 @@ namespace Task04
             int iQuantity = Convert.ToInt32(quantity);
             int summ = iCost * iQuantity;
 
-            
-
-
             Console.WriteLine("**************************************");
             Console.WriteLine("**************ООО  ПРИВЕТ*************");
             Console.WriteLine("**************************************");
@@ -44,8 +41,6 @@ namespace Task04
             Console.WriteLine("**************************************");
             Console.WriteLine("***********СПАСИБО ЗА ПОКУПКУ*********");
             Console.WriteLine("**************************************");
-
-
         }
     }
 }

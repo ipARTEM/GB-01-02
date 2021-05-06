@@ -29,8 +29,6 @@ namespace Task05
             Console.WriteLine($"Среднесуточная температура: {average}");
 
             Test(iNumber, average);
-
-
         }
 
         private static void Test(int iNumber, int average)

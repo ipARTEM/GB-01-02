@@ -22,7 +22,6 @@ namespace Task01
             int average = (iMin + iMax) / 2;
 
             Console.WriteLine($"Среднесуточная температура: {average}");
-
         }
     }
 }

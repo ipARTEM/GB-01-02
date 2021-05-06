@@ -22,7 +22,6 @@ namespace Task03
             {
                 Console.WriteLine("Число не чётное!");
             }
-
         }
     }
 }
