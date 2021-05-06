@@ -36,8 +36,8 @@ namespace Task06
 
         static void Main(string[] args)
         {
-            DayWeek office1 = DayWeek.Monday & DayWeek.Tuesday & DayWeek.Wednesday & DayWeek.Thursday & DayWeek.Friday;
-            DayWeek office2 = DayWeek.Saturday | DayWeek.Sunday;
+            DayWeek office1 = DayWeek.Monday | DayWeek.Tuesday | DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday;
+            DayWeek office2 = DayWeek.Monday | DayWeek.Tuesday | DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday|DayWeek.Saturday | DayWeek.Sunday;
             DayWeek office3 = DayWeek.Monday | DayWeek.Wednesday | DayWeek.Friday;
             DayWeek office4 = DayWeek.Tuesday | DayWeek.Thursday | DayWeek.Saturday | DayWeek.Sunday;
             DayWeek office5 = DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday | DayWeek.Saturday;
