@@ -6,53 +6,59 @@ namespace Task06
     {
         [Flags]
         public enum DayWeek
-        {  /*
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday,
-
-            
-            Понедельник,
-            Вторник,
-            Среда,
-            Четверг,
-            Пятница,
-            Суббота,
-            Воскресенье
-            */
-            Monday =    0b_0000_0001,
-            Tuesday =   0b_0000_0010,
-            Wednesday = 0b_0000_0100,
-            Thursday =  0b_0000_1000,
-            Friday =    0b_0001_0000,
-            Saturday =  0b_0010_0000,
-            Sunday =    0b_0100_0000,
-            
+        {  
+            Понедельник= 0b_0000_0001,
+            Вторник=     0b_0000_0011,
+            Среда =      0b_0000_0100,
+            Четверг =    0b_0000_1000, 
+            Пятница=     0b_0001_0000,
+            Суббота =    0b_0010_0000,
+            Воскресенье =0b_0100_0000,
         }
+
+        //public enum DayWeekRus
+        //{
+        //    Понедельник = Monday,
+        //    Вторник = Tuesday,
+        //    Среда = 0b_0000_0100,
+        //    Четверг = 0b_0000_1000,
+        //    Пятница = 0b_0001_0000,
+        //    Суббота = 0b_0010_0000,
+        //    Воскресенье = 0b_0100_0000,
+
+
+        //}
 
         static void Main(string[] args)
         {
-            DayWeek office1 = DayWeek.Monday | DayWeek.Tuesday | DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday;
-            DayWeek office2 = DayWeek.Monday | DayWeek.Tuesday | DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday|DayWeek.Saturday | DayWeek.Sunday;
-            DayWeek office3 = DayWeek.Monday | DayWeek.Wednesday | DayWeek.Friday;
-            DayWeek office4 = DayWeek.Tuesday | DayWeek.Thursday | DayWeek.Saturday | DayWeek.Sunday;
-            DayWeek office5 = DayWeek.Wednesday | DayWeek.Thursday | DayWeek.Friday | DayWeek.Saturday;
+            DayWeek office1 = DayWeek.Вторник | DayWeek.Среда | DayWeek.Четверг | DayWeek.Пятница;
+            DayWeek office2 = DayWeek.Понедельник | DayWeek.Вторник | DayWeek.Среда | DayWeek.Четверг | DayWeek.Пятница|DayWeek.Суббота | DayWeek.Воскресенье;
+            DayWeek office3 = DayWeek.Понедельник | DayWeek.Среда | DayWeek.Пятница;
+            DayWeek office4 = DayWeek.Вторник | DayWeek.Четверг | DayWeek.Суббота | DayWeek.Воскресенье;
+            DayWeek office5 = DayWeek.Среда | DayWeek.Четверг | DayWeek.Пятница | DayWeek.Суббота;
 
-            DayWeek day = ((DayWeek)DateTime.Now.DayOfWeek)-1;
+            var day = DateTime.Now.DayOfWeek;
 
-            Console.WriteLine($"У нас есть 5 офисов. Сегодня день недели {day}");
-
-            bool isOffice1 = day == office1;
+            DayWeek dayRu;
 
 
-            Console.WriteLine("В данный день недели работают офисы: ");
+            
+
+            Console.WriteLine();
+            Console.WriteLine("Наши офисы работают по дням недели: ");
+            Console.WriteLine($" Офис №1 " +office1);
+            Console.WriteLine($" Офис №2 " + office2);
+            Console.WriteLine($" Офис №3 " + office3);
+            Console.WriteLine($" Офис №4 " + office4);
+            Console.WriteLine($" Офис №5 " + office5);
+            Console.WriteLine();
+            Console.WriteLine($" Сегодня день недели {day}, а это значит, что сегодня работают офисы: ");
+
+            if (day.ToString() ==office1.ToString())
+            {
+                Console.WriteLine(" Офис №1 ");
+            }
         }
-
-
 
 
     }
