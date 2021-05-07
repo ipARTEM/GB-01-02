@@ -38,29 +38,59 @@ namespace Task06
             DayWeek office5 = DayWeek.Среда | DayWeek.Четверг | DayWeek.Пятница | DayWeek.Суббота;
 
             var day = DateTime.Now.DayOfWeek;
+            DayWeek dayRu=new DayWeek();
 
-            DayWeek dayRu;
-
-
-            
+            if (day.ToString()== "Monday")
+            {
+                dayRu = DayWeek.Понедельник;
+            }
+            if (day.ToString() == "Tuesday")
+            {
+                dayRu = DayWeek.Вторник;
+            }
+            if (day.ToString() == "Wednesday")
+            {
+                dayRu = DayWeek.Среда;
+            }
+            if (day.ToString() == "Thursday")
+            {
+                dayRu = DayWeek.Четверг;
+            }
+            if (day.ToString() == "Friday")
+            {
+                dayRu = DayWeek.Пятница;
+            }
+            if (day.ToString() == "Saturday")
+            {
+                dayRu = DayWeek.Суббота;
+            }
+            if (day.ToString() == "Sunday")
+            {
+                dayRu = DayWeek.Воскресенье;
+            }
 
             Console.WriteLine();
-            Console.WriteLine("Наши офисы работают по дням недели: ");
+            Console.WriteLine("Наши офисы работают по следующим дням недели: ");
             Console.WriteLine($" Офис №1 " +office1);
             Console.WriteLine($" Офис №2 " + office2);
             Console.WriteLine($" Офис №3 " + office3);
             Console.WriteLine($" Офис №4 " + office4);
             Console.WriteLine($" Офис №5 " + office5);
             Console.WriteLine();
-            Console.WriteLine($" Сегодня день недели {day}, а это значит, что сегодня работают офисы: ");
+            Console.WriteLine($" Сегодня день недели {dayRu}, а это значит, что сегодня работают офисы: ");
 
-            if (day.ToString() ==office1.ToString())
+            bool isOffice1 = dayRu == office1;
+
+            if ("Пятница" == office1.ToString())
             {
                 Console.WriteLine(" Офис №1 ");
             }
+            if (dayRu.ToString() == "Пятница")
+            {
+                Console.WriteLine(" Офис №2");
+
+            }
         }
-
-
     }
 }
 
